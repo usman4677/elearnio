@@ -1,6 +1,7 @@
 class Api::V1::CourseResource < JSONAPI::Resource
-  caching
+  # caching
 
-  attributes :name, :self_assignable
+  attributes :name, :self_assignable, :coach
+  belongs_to :coach
   filter :self_assignable
 end
